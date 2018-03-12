@@ -2,7 +2,7 @@ import React, {Component} from 'react';
 
 class Article extends Component {
     constructor(props) {
-        super(props)
+        super(props);
         this.state = {isOpen: props.defaultArticleState};
     }
 
@@ -13,7 +13,7 @@ class Article extends Component {
                     <p>{article.description}</p>
                 </div>
                 <div>
-                    <span className="card-subtitle text-muted">{article.publishedAt.toLocaleString()}</span>
+                    <span className="card-subtitle text-muted">{(new Date(article.publishedAt)).toLocaleString()}</span>
                 </div>
             </div>) : "";
 
